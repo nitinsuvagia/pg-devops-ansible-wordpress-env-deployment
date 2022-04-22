@@ -1,0 +1,19 @@
+---
+# Main Wordpress Automation File
+- hosts: wordpress
+  gather_facts: False
+  vars:
+    wp_mysql_db: 'database'
+    wp_mysql_user: 'mysql_rootuser'
+    wp_mysql_password: 'mysql_rootpass'
+#  tasks:
+#    - name: install python 3
+#      raw: test -e /usr/bin/python3 || (apt -y update && apt install -y python3.8)
+
+#- hosts: wordpress
+
+  roles:
+    - server
+    - php
+    - mysql
+    - wordpress

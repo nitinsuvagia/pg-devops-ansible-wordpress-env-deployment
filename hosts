@@ -1,0 +1,5 @@
+[wordpress]
+172.31.32.104
+
+[wordpress:vars]
+ansible_python_interpreter=/usr/bin/python3
